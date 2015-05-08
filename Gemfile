@@ -26,3 +26,11 @@ end
 group :production do
   gem 'rails_12factor'
 end
+
+gem "devise"
+#gem "domp"
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-linkedin'
