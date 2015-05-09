@@ -1,7 +1,7 @@
 Social Logins Application
 ================
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://protected-badlands-1815.herokuapp.com)
 
 With the help of this application user can sign in/ signup using email or social media site like Facebook, Google, Linkden, Tiwtter, Github.
 
