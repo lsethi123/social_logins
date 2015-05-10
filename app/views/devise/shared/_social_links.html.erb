@@ -1,16 +1,12 @@
 
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-  	<%-if request.original_url.split('/').last=="sign_in" -%>
-  		<%user_request = "sign_in"%>
-  	<%else%>
-  		<%user_request = "sign_up"%>
-  	<%end%>
+
   	<%-if provider.to_s  !="twitter"
   		social_media = provider.to_s.split('_')[0]
   		social_media = "google-plus" if social_media =="google"%>
   	 <div class="col-xs-4 col-sm-2">
-    	<%= link_to "<i class='fa fa-#{social_media}'></i><span class='media'>#{user_request.camelize} with #{social_media.split('-')[0].titleize}</span>".html_safe, omniauth_authorize_path(resource_name, provider),class:"btn btn-block btn-social btn-#{social_media}" %>
+    	<%= link_to "<i class='fa fa-#{social_media}'></i>#{social_media.split('-')[0].titleize}".html_safe, omniauth_authorize_path(resource_name, provider),class:"btn btn-block btn-social btn-#{social_media}" %>
     </div>
 
     <%-end-%>
@@ -19,7 +15,7 @@
 <style type="text/css">
 
 body {
-  background: url(http://lorempixel.com/1920/1920/city/8/) no-repeat center center fixed;
+  background: url("/assets/login_bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
